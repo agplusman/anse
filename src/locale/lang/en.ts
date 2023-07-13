@@ -19,7 +19,7 @@ export const en = {
       replicate: {},
     },
     conversations: {
-      title: 'Conversations',
+      title: 'Frameworks',
       add: 'New',
       recent: 'Recents',
       noRecent: 'No recents',
@@ -68,7 +68,7 @@ export const en = {
     scroll: 'Scroll to bottom',
     empty: 'No data',
     send: {
-      placeholder: 'Enter Something...',
+      placeholder: 'Describe Your Problem...',
       button: 'Send',
     },
     copyed: 'Copyed!',
