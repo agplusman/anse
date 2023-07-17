@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@astrojs/netlify':
     specifier: 2.3.0
@@ -69,7 +73,7 @@ dependencies:
     version: 0.10.3
   astro:
     specifier: ^2.7.3
-    version: 2.7.3
+    version: 2.7.3(@types/node@20.4.2)
   bumpp:
     specifier: ^9.1.1
     version: 9.1.1
@@ -141,6 +145,9 @@ devDependencies:
   '@types/mapbox__rehype-prism':
     specifier: ^0.8.0
     version: 0.8.0
+  '@types/node':
+    specifier: ^20.4.2
+    version: 20.4.2
   '@typescript-eslint/parser':
     specifier: ^5.60.1
     version: 5.60.1(eslint@8.44.0)(typescript@5.1.6)
@@ -235,7 +242,7 @@ packages:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.7.3
+      astro: 2.7.3(@types/node@20.4.2)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -259,7 +266,7 @@ packages:
       '@astrojs/underscore-redirects': 0.1.0
       '@astrojs/webapi': 2.2.0
       '@netlify/functions': 1.6.0
-      astro: 2.7.3
+      astro: 2.7.3(@types/node@20.4.2)
       esbuild: 0.15.18
     dev: false
 
@@ -269,7 +276,7 @@ packages:
       astro: ^2.7.0
     dependencies:
       '@astrojs/webapi': 2.2.0
-      astro: 2.7.3
+      astro: 2.7.3(@types/node@20.4.2)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -324,7 +331,7 @@ packages:
       '@astrojs/webapi': 2.2.0
       '@vercel/analytics': 0.1.11(react@18.2.0)
       '@vercel/nft': 0.22.6
-      astro: 2.7.3
+      astro: 2.7.3(@types/node@20.4.2)
       esbuild: 0.17.19
       fast-glob: 3.3.0
       set-cookie-parser: 2.6.0
@@ -1818,7 +1825,7 @@ packages:
       eslint-import-resolver-typescript: 2.7.1(eslint-plugin-import@2.27.5)(eslint@8.44.0)
       eslint-plugin-eslint-comments: 3.2.0(eslint@8.44.0)
       eslint-plugin-html: 6.2.0
-      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.60.1)(eslint@8.44.0)
+      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-typescript@2.7.1)(eslint@8.44.0)
       eslint-plugin-jsonc: 2.9.0(eslint@8.44.0)
       eslint-plugin-jsx-a11y: 6.7.1(eslint@8.44.0)
       eslint-plugin-markdown: 2.2.1(eslint@8.44.0)
@@ -1911,6 +1918,7 @@ packages:
 
   /@jridgewell/source-map@0.3.4:
     resolution: {integrity: sha512-KE/SxsDqNs3rrWwFHcRh15ZLVFrI0YoZtgAdIyIq9k5hUNmiWRXXThPomIxHuL20sLdgzbDFyvkUMna14bvtrw==}
+    deprecated: the version has a bug with typescript type resolution
     dev: true
 
   /@jridgewell/sourcemap-codec@1.4.14:
@@ -2273,7 +2281,7 @@ packages:
   /@types/keyv@3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
-      '@types/node': 20.3.3
+      '@types/node': 20.4.2
     dev: false
 
   /@types/mapbox__rehype-prism@0.8.0:
@@ -2298,6 +2306,10 @@ packages:
 
   /@types/node@20.3.3:
     resolution: {integrity: sha512-wheIYdr4NYML61AjC8MKj/2jrR/kDQri/CIpVoZwldwhnIrD/j9jIU5bJ8yBKuB2VhpFV7Ab6G2XkBjv9r9Zzw==}
+    dev: true
+
+  /@types/node@20.4.2:
+    resolution: {integrity: sha512-Dd0BYtWgnWJKwO1jkmTrzofjK2QXXcai0dmtzvIBhcA+RsG5h8R3xlyta0kGOZRNfL9GuRtb1knmPEhQrePCEw==}
 
   /@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -2318,7 +2330,7 @@ packages:
   /@types/responselike@1.0.0:
     resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
     dependencies:
-      '@types/node': 20.3.3
+      '@types/node': 20.4.2
     dev: false
 
   /@types/semver@7.5.0:
@@ -2646,7 +2658,7 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.3.0
       magic-string: 0.30.0
-      vite: 4.3.9
+      vite: 4.3.9(@types/node@20.4.2)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -2686,7 +2698,7 @@ packages:
       astro: ^1.6.0 || ^2.0.0
       vite-plugin-pwa: '>=0.16.3 <1'
     dependencies:
-      astro: 2.7.3
+      astro: 2.7.3(@types/node@20.4.2)
       vite-plugin-pwa: 0.16.4(vite@4.3.9)(workbox-build@7.0.0)(workbox-window@7.0.0)
     dev: true
 
@@ -3191,7 +3203,7 @@ packages:
       - supports-color
     dev: true
 
-  /astro@2.7.3:
+  /astro@2.7.3(@types/node@20.4.2):
     resolution: {integrity: sha512-DwPvvOYElhCNyAWUlFd17HhTNBx+XXnAZfM/PYHq7RicvC/tG4loBjlYk/Yw7x9wQCkbKjoxVRiNYvmvSUmisw==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
@@ -3252,7 +3264,7 @@ packages:
       typescript: 5.1.6
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.3.9
+      vite: 4.3.9(@types/node@20.4.2)
       vitefu: 0.2.4(vite@4.3.9)
       yargs-parser: 21.1.1
       zod: 3.21.4
@@ -4609,7 +4621,7 @@ packages:
       eslint-plugin-promise: ^6.0.0
     dependencies:
       eslint: 8.44.0
-      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.60.1)(eslint@8.44.0)
+      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-typescript@2.7.1)(eslint@8.44.0)
       eslint-plugin-n: 15.7.0(eslint@8.44.0)
       eslint-plugin-promise: 6.1.1(eslint@8.44.0)
     dev: true
@@ -4633,7 +4645,7 @@ packages:
     dependencies:
       debug: 4.3.4
       eslint: 8.44.0
-      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.60.1)(eslint@8.44.0)
+      eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-typescript@2.7.1)(eslint@8.44.0)
       glob: 7.2.3
       is-glob: 4.0.3
       resolve: 1.22.2
@@ -4642,7 +4654,7 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-module-utils@2.8.0(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-node@0.3.7)(eslint@8.44.0):
+  /eslint-module-utils@2.8.0(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@2.7.1)(eslint@8.44.0):
     resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -4667,6 +4679,7 @@ packages:
       debug: 3.2.7
       eslint: 8.44.0
       eslint-import-resolver-node: 0.3.7
+      eslint-import-resolver-typescript: 2.7.1(eslint-plugin-import@2.27.5)(eslint@8.44.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4716,7 +4729,7 @@ packages:
       htmlparser2: 7.2.0
     dev: true
 
-  /eslint-plugin-import@2.27.5(@typescript-eslint/parser@5.60.1)(eslint@8.44.0):
+  /eslint-plugin-import@2.27.5(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-typescript@2.7.1)(eslint@8.44.0):
     resolution: {integrity: sha512-LmEt3GVofgiGuiE+ORpnvP+kAm3h6MLZJ4Q5HCyHADofsb4VzXFsRiWj3c0OFiV+3DWFh0qg3v9gcPlfc3zRow==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -4734,7 +4747,7 @@ packages:
       doctrine: 2.1.0
       eslint: 8.44.0
       eslint-import-resolver-node: 0.3.7
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-node@0.3.7)(eslint@8.44.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.60.1)(eslint-import-resolver-node@0.3.7)(eslint-import-resolver-typescript@2.7.1)(eslint@8.44.0)
       has: 1.0.3
       is-core-module: 2.12.1
       is-glob: 4.0.3
@@ -9404,14 +9417,14 @@ packages:
       debug: 4.3.4
       fast-glob: 3.3.0
       pretty-bytes: 6.1.0
-      vite: 4.3.9
+      vite: 4.3.9(@types/node@20.4.2)
       workbox-build: 7.0.0
       workbox-window: 7.0.0
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite@4.3.9:
+  /vite@4.3.9(@types/node@20.4.2):
     resolution: {integrity: sha512-qsTNZjO9NoJNW7KnOrgYwczm0WctJ8m/yqYAMAK9Lxt4SoySUfS5S8ia9K7JHpa3KEeMfyF8LoJ3c5NeBJy6pg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -9436,6 +9449,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.4.2
       esbuild: 0.17.19
       postcss: 8.4.24
       rollup: 3.26.0
@@ -9450,7 +9464,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.3.9
+      vite: 4.3.9(@types/node@20.4.2)
 
   /vscode-css-languageservice@6.2.6:
     resolution: {integrity: sha512-SA2WkeOecIpUiEbZnjOsP/fI5CRITZEiQGSHXKiDQDwLApfKcnLhZwMtOBbIifSzESVcQa7b/shX/nbnF4NoCg==}

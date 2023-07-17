@@ -33,9 +33,11 @@ Anse is a fully optimized UI for AI Chats.
 
 ### Getting Started
 
-1. Install dependencies
+1. Install dependencies (plus one optional)
    ```bash
     pnpm install
+    pnpm install vite-plugin-pwa
+    pnpm install @types/node --save-dev
    ```
 2. Run the application, the local project runs on `http://localhost:3000/`
    ```bash
